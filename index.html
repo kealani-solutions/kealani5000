@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Starters for Rotary Leaders</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f8f7f5;
+    --card: #ffffff;
+    --ink: #191919;
+    --body: #4d4d4d;
+    --muted: #787c82;
+    --accent: #2e4453;
+    --accent-soft: #eef1f3;
+    --border: #e5e2dd;
+    --radius: 14px;
+    --maxw: 930px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--body);
+    font-family: "Manrope", system-ui, -apple-system, sans-serif;
+    font-size: 22px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 22px;
+  }
+
+  /* ---------- Header ---------- */
+  header.site {
+    padding: 64px 0 8px;
+  }
+  .eyebrow {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 16px;
+  }
+  h1 {
+    font-size: 48px;
+    line-height: 1.12;
+    font-weight: 800;
+    color: var(--ink);
+    margin: 0 0 22px;
+    letter-spacing: -0.02em;
+  }
+  .lede {
+    font-size: 24px;
+    color: var(--body);
+    margin: 0 0 10px;
+  }
+
+  hr.rule {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 48px 0;
+  }
+
+  /* ---------- Section intro ---------- */
+  .section-head {
+    margin: 0 0 8px;
+    border-left: 4px solid var(--accent);
+    padding-left: 16px;
+  }
+  .section-head h2 {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 6px;
+  }
+  .section-head p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 18px;
+  }
+
+  /* ---------- Start Here ---------- */
+  .start-here {
+    margin-top: 36px;
+  }
+  .start-here .section-head { margin-bottom: 14px; }
+  .start-here .section-head h2 { color: var(--accent); }
+
+  /* ---------- Cards ---------- */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px 24px 22px;
+    margin: 18px 0;
+  }
+  .card h3 {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 0 0 16px;
+    letter-spacing: -0.01em;
+  }
+
+  .prompt {
+    position: relative;
+    background: #faf9f7;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    font-size: 20px;
+    line-height: 1.55;
+    color: #2b2b2b;
+  }
+  .prompt p { margin: 0; }
+
+  .copy-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    padding: 8px 16px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background: var(--accent);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+  .copy-btn:hover { background: #24323d; }
+  .copy-btn.copied { background: #1f7a3d; }
+
+  .customize {
+    margin: 18px 0 0;
+    font-size: 18px;
+    color: var(--body);
+  }
+  .customize strong { color: var(--ink); }
+
+  .teaches {
+    margin: 16px 0 0;
+    padding: 14px 16px;
+    background: var(--accent-soft);
+    border-radius: 8px;
+    font-size: 17px;
+    color: #41525e;
+  }
+  .teaches strong {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 3px;
+  }
+
+  /* ---------- Expandable sections ---------- */
+  details.section {
+    border-top: 1px solid var(--border);
+    padding: 6px 0;
+  }
+  details.section[open] { padding-bottom: 18px; }
+  details.section > summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 22px 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  details.section > summary::-webkit-details-marker { display: none; }
+  .sum-text { flex: 1; }
+  .sum-text h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 0 0 5px;
+    letter-spacing: -0.01em;
+  }
+  .sum-text .sub {
+    font-size: 18px;
+    color: var(--muted);
+    margin: 0;
+  }
+  .chev {
+    flex: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    color: var(--accent);
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+    transition: transform 0.2s ease, background 0.2s ease;
+    align-self: center;
+  }
+  details.section[open] .chev {
+    transform: rotate(45deg);
+    background: var(--accent-soft);
+  }
+
+  /* ---------- Footer forms ---------- */
+  .footer-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 30px 28px;
+    margin: 22px 0;
+  }
+  .footer-block h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+  }
+  .footer-block p { margin: 0 0 20px; color: var(--body); font-size: 19px; }
+  .cta {
+    display: inline-block;
+    padding: 13px 26px;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 9px;
+    transition: background 0.15s ease;
+  }
+  .cta:hover { background: #24323d; }
+  .cta.secondary {
+    background: transparent;
+    color: var(--accent);
+    border: 1.5px solid var(--accent);
+  }
+  .cta.secondary:hover { background: var(--accent-soft); }
+
+  footer.fine {
+    text-align: center;
+    color: var(--muted);
+    font-size: 15px;
+    padding: 48px 0 64px;
+  }
+
+  @media (max-width: 600px) {
+    .wrap { padding: 0 15px; }
+    body { font-size: 20px; }
+    header.site { padding-top: 40px; }
+    h1 { font-size: 34px; }
+    .lede { font-size: 20px; }
+    .section-head p { font-size: 17px; }
+    .sum-text h2 { font-size: 25px; }
+    .sum-text .sub { font-size: 16px; }
+    .card { padding: 18px 15px; }
+    .card h3 { font-size: 22px; }
+    .prompt { font-size: 19px; padding: 15px 16px; }
+    .customize { font-size: 17px; }
+    .teaches { font-size: 16px; }
+    .footer-block { padding: 24px 18px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="site">
+    <p class="eyebrow">Rotary Leadership Training</p>
+    <h1>AI Starters for Running a Better Club</h1>
+    <p class="lede">A handful of ready-to-use starting points for working with AI tools like Claude, Gemini, and NotebookLM. Find your challenge, copy a starter, add your club's details, and go.</p>
+    <p class="lede" style="font-size:20px;color:var(--muted);">These aren't magic phrases. Each one teaches the same core skill: give the AI real context, ask it to question you before it answers, and expect depth instead of a checklist.</p>
+  </header>
+
+  <!-- ============ START HERE ============ -->
+  <section class="start-here">
+    <div class="section-head">
+      <h2>Start Here</h2>
+      <p>New to this? These three teach the whole game. Try them in order.</p>
+    </div>
+
+    <div class="card">
+      <h3>Introduce Your Club to the AI</h3>
+      <div class="prompt">
+        <p>I lead a Rotary club and I'm going to ask you for help with a few things today. First, let me give you context so your help is actually specific to us. We're the Rotary Club of [Club Name] in [City], with about [number] members. We meet [day, time, location]. Our members are mostly [describe — age range, professions, how long they've been Rotarians]. The service work we're best known for is [describe]. The thing we most want to improve this year is [describe]. Read all of that back to me in your own words so I know you understand my club, and tell me one thing you'd want to know more about before advising me.</p>
+      </div>
+      <button class="copy-btn" type="button">Copy</button>
+      <p class="customize"><strong>Customize:</strong> Fill in every bracket honestly — vague context gets vague answers. Keep this paragraph somewhere; you can paste it at the top of any other starter on this page.</p>
+      <div class="teaches"><strong>What it teaches</strong>The AI knows nothing about your club until you tell it. Context is the single biggest lever you have.</div>
+    </div>
+
+    <div class="card">
+      <h3>Ask Before You Answer</h3>
+      <div class="prompt">
+        <p>I want help with [describe your task in one sentence — e.g., "writing a thank-you note to a sponsor" or "planning next month's program"]. Before you give me anything, ask me the three or four questions that would let you do this really well instead of generically. Wait for my answers, then help me.</p>
+      </div>
+      <button class="copy-btn" type="button">Copy</button>
+      <p class="customize"><strong>Customize:</strong> Use this whenever you'd normally just fire off a one-line request. The questions it asks are often more useful than the answer you would have gotten.</p>
+      <div class="teaches"><strong>What it teaches</strong>A good first move is making the AI interview <em>you</em>. It surfaces the details you forgot were important.</div>
+    </div>
+
+    <div class="card">
+      <h3>Go Deeper Than the First Answer</h3>
+      <div class="prompt">
+        <p>That's a solid start, but it feels like the safe, generic answer. I want you to push harder. Tell me what I'm probably overlooking, where this could go wrong, and what a more ambitious version would look like. Be direct with me — I'd rather hear a hard truth now than discover it later.</p>
+      </div>
+      <button class="copy-btn" type="button">Copy</button>
+      <p class="customize"><strong>Customize:</strong> Paste this as a follow-up <em>after</em> the AI gives you a first response to anything. Repeat it as many times as you like.</p>
+      <div class="teaches"><strong>What it teaches</strong>The first answer is rarely the best one. Asking for pushback and depth is how you get past the obvious.</div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <div class="section-head" style="margin-bottom:6px;">
+    <h2>Find Your Challenge</h2>
+    <p>Tap a topic to open its starters.</p>
+  </div>
+
+  <!-- ============ RUNNING YOUR CLUB ============ -->
+  <details class="section">
+    <summary>
+      <span class="sum-text">
+        <h2>Running Your Club</h2>
+        <p class="sub">Planning, board meetings, officer transitions, governance</p>
+      </span>
+      <span class="chev" aria-hidden="true">+</span>
+    </summary>
+
+    <div class="card">
+      <h3>Build a Three-Year Action Plan</h3>
+      <div class="prompt">
+        <p>I'm the [incoming/current] president of [Club Name], a Rotary club of approximately [number] members in [city/community]. Before we build a three-year strategic plan together, I want you to interview me first — ask the questions a strategic advisor would ask before making any recommendations. Be direct if something I describe sounds like a structural weakness or a gap we're avoiding. Once you've asked your questions and I've answered, help me build a plan that reflects my specific club's situation — not a generic Rotary template.</p>
+      </div>
+      <button class="copy-btn" type="button">Copy</button>
+      <p class="customize"><strong>Customize:</strong> Have your last year's numbers handy — membership, finances, event turnout — so you can answer its questions with specifics.</p>
+      <div class="teaches"><strong>What it teaches</strong>Give the AI your role and context first. Ask it to question you before advising you. Expect depth, not a checklist.</div>
+    </div>
+
+    <div class="card">
+      <h3>Solve a Recurring President-Elect Gap</h3>
+      <div class="prompt">
+        <p>I'm the current president of the Rotary Club of [Club Name] in [City]. We have [number] members and have been operating for [number] years. We face a recurring problem: identifying and developing a willing president-elect. This happens year after year, and we've tried [briefly describe 1-2 attempts, e.g., "asking at board meetings" or "reaching out to newer members"]. I want you to act as an organizational advisor — not just give me ideas, but help me understand what's likely causing this pattern and what a real structural fix looks like. Challenge me if my description of the problem sounds like I'm missing something. Start by asking me two or three questions so you understand our club before you recommend anything.</p>
+      </div>
+      <button class="copy-btn" type="button">Copy</button>
+      <p class="customize"><strong>Customize:</strong> Name what you've already tried, honestly. That's what stops the AI from suggesting the obvious things you've already done.</p>
+      <div class="teaches"><strong>What it teaches</strong>Name the pattern, not just the symptom. Give the AI a role (advisor, not answer machine). Ask it to push back and probe before it speaks.</div>
+    </div>
+
+    <div class="card">
+      <h3>Plan a Board Meeting Worth Attending</h3>
+      <div class="prompt">
+        <p>I'm planning the agenda for our next board meeting at the Rotary Club of [Club Name]. Here's what's on my mind: [list the topics, decisions, and problems, even messily]. We have [length, e.g., 60 minutes] and our meetings tend to [describe the usual problem — e.g., "run long," "rehash old debates," or "avoid the hard decisions"]. Help me turn this into a tight agenda with clear time blocks and a decision or owner attached to each item. Before you do, ask me which one or two items actually matter most, and flag anything here that looks like a conversation we keep having without resolving.</p>
+      </div>
+      <button class="copy-btn" type="button">Copy</button>
+      <p class="customize"><strong>Customize:</strong> Dump your raw notes in — the AI is good at turning a messy brain-dump into a structured agenda. Add your meeting length so the time blocks are realistic.</p>
+      <div class="teaches"><strong>What it teaches</strong>You don't need a clean request. Hand over the mess and ask the AI to impose structure — and to name the unresolved loop.</div>
+    </div>
+
+    <div class="card">
+      <h3>Hand Off a Role Without Losing the Knowledge</h3>
+      <div class="prompt">
+        <p>I'm the outgoing [role — e.g., secretary, treasurer, membership chair] for the Rotary Club of [Club Name], handing off to someone new. So much of what I do lives in my head. I want to build a handoff document that actually sets my successor up to succeed. Interview me: ask the questions that will pull out the recurring tasks, the deadlines, the relationships, and the "here's what nobody tells you" details that I'd otherwise forget to write down. Then organize my answers into a clear handoff guide.</p>
+      </div>
+      <button class="copy-btn" type="button">Copy</button>
+      <p class="customize"><strong>Customize:</strong> Do this as a conversation over coffee — answer its questions out loud and paste them back in. The "what nobody tells you" details are the real value.</p>
+      <div class="teaches"><strong>What it teaches</strong>The AI is excellent at interviewing knowledge out of your head and organizing it — far better than facing a blank document alone.</div>
+    </div>
+  </details>
+
+  <!-- ============ GROWING MEMBERSHIP ============ -->
+  <details class="section">
+    <summary>
+      <span class="sum-text">
+        <h2>Growing Your Membership</h2>
+        <p class="sub">Attraction, retention, younger members, lapsed members</p>
+      </span>
+      <span class="chev" aria-hidden="true">+</span>
+    </summary>
+
+    <div class="card">
+      <h3>Attract Younger Members — Honestly</h3>
+      <div class="prompt">
+        <p>Our club has been working to attract members under 40 for the past [number] years with limited success. Here's what we've already tried: [describe 1-2 efforts, e.g., "we hosted a happy hour event" or "we promoted on Instagram"]. For context: our club meets [day/time/location], our average member age is around [number], and our most visible service project is [describe]. I want you to act as a frank membership strategist — not someone who validates our efforts, but someone who tells me honestly what might be working against us and what we might be missing. Before giving recommendations, ask me what else you'd need to know to make this advice actually specific to our club, not generic.</p>
+      </div>
+      <button class="copy-btn" type="button">Copy</button>
+      <p class="customize"><strong>Customize:</strong> Be specific about meeting time, average age, and signature project — those three facts are usually what make or break appeal to younger people.</p>
+      <div class="teaches"><strong>What it teaches</strong>Tell the AI what you've tried — that changes everything it suggests. Ask for an honest advisor, not an encourager.</div>
+    </div>
+
+    <div class="card">
+      <h3>Win Back Members Who Drifted Away</h3>
+      <div class="prompt">
+        <p>Over the past few years we've lost members at the Rotary Club of [Club Name] — not through conflict, mostly people who quietly drifted off. A few I'd love to bring back are [describe a couple, e.g., "a former board member whose job got busy" or "a younger member who came twice and stopped"]. I want to reach out, but I don't want it to feel like a guilt trip or a renewal pitch. Help me think through why people actually drift, then help me draft a genuine, low-pressure outreach for one specific person once you've asked me a bit about them.</p>
+      </div>
+      <button class="copy-btn" type="button">Copy</button>
+      <p class="customize"><strong>Customize:</strong> Pick one real person and answer the AI's questions about them. A message written for one person beats a generic "we miss you" blast every time.</p>
+      <div class="teaches"><strong>What it teaches</strong>Specificity beats scale. Narrowing to one real person produces a message that sounds human instead of like a form letter.</div>
+    </div>
+
+    <div class="card">
+      <h3>Design a Retention Check-In</h3>
+      <div class="prompt">
+        <p>I want to get ahead of member attrition at the Rotary Club of [Club Name] instead of reacting to it. I'm thinking about doing regular check-ins with members, but I don't want it to feel like a survey or HR exercise. Act as a membership advisor: before suggesting anything, ask me about our club's size, culture, and how connected members currently feel. Then help me design a simple, repeatable way to take the pulse of our members and catch the ones who are quietly disengaging — and tell me honestly if a formal check-in is even the right tool here.</p>
+      </div>
+      <button class="copy-btn" type="button">Copy</button>
+      <p class="customize"><strong>Customize:</strong> Tell it your real club culture — a 20-person club and a 120-person club need completely different approaches.</p>
+      <div class="teaches"><strong>What it teaches</strong>Let the AI challenge your proposed solution. Sometimes the best answer is "the tool you're reaching for isn't the right one."</div>
+    </div>
+
+    <div class="card">
+      <h3>Make a First-Time Guest Want to Come Back</h3>
+      <div class="prompt">
+        <p>We get guests and prospective members at the Rotary Club of [Club Name], but too many come once and never return. Here's what a typical first visit looks like for them right now: [walk through it — how they're greeted, where they sit, what happens during the meeting]. I want you to play the role of a first-time guest and tell me, step by step, where this experience would lose you or make you feel like an outsider. Then help me redesign the guest experience so a newcomer leaves wanting to come back.</p>
+      </div>
+      <button class="copy-btn" type="button">Copy</button>
+      <p class="customize"><strong>Customize:</strong> Describe the visit in real detail — the more honestly you narrate it, the sharper the AI can be about the awkward moments you've stopped noticing.</p>
+      <div class="teaches"><strong>What it teaches</strong>Asking the AI to role-play a perspective (here, the nervous newcomer) reveals blind spots you're too close to see.</div>
+    </div>
+  </details>
+
+  <!-- ============ EVENTS & FUNDRAISING ============ -->
+  <details class="section">
+    <summary>
+      <span class="sum-text">
+        <h2>Events &amp; Fundraising</h2>
+        <p class="sub">Planning, promotion, volunteer coordination, post-event wrap-up</p>
+      </span>
+      <span class="chev" aria-hidden="true">+</span>
+    </summary>
+
+    <div class="card">
+      <h3>Reinvent a Tired Legacy Fundraiser</h3>
+      <div class="prompt">
+        <p>Our club has run an annual [describe the event — dinner, auction, golf tournament, etc.] for over 20 years. It's been our biggest fundraiser and honestly part of our club's identity in the community — people show up because of what it represents, not just what it raises. The team who built it is now in their mid-70s and ready to step back. We need to either redesign it so it requires far less physical effort, or create something new that can match its community impact and revenue. Before we brainstorm options, ask me the questions that will help you understand what's made this event work — not just logistically, but why people keep coming back. And push back on any assumptions I might be making about what "less strenuous" has to mean — I may be limiting the options without realizing it.</p>
+      </div>
+      <button class="copy-btn" type="button">Copy</button>
+      <p class="customize"><strong>Customize:</strong> Give it the emotional context — the traditions, the regulars, what the event means in town — not just the logistics.</p>
+      <div class="teaches"><strong>What it teaches</strong>Ask the AI to uncover why something works before replacing it. Invite it to challenge the constraints you've quietly set.</div>
+    </div>
+
+    <div class="card">
+      <h3>Plan a New Fundraising Event From Scratch</h3>
+      <div class="prompt">
+        <p>We want to launch a new fundraising event at the Rotary Club of [Club Name]. Our goals are to raise around [amount/range] and to [secondary goal — e.g., "raise our visibility with younger families" or "involve members who don't usually volunteer"]. For context, our club is [size], our community is [describe], and our volunteer capacity is realistically [be honest]. Don't jump to ideas yet. First, interview me about our resources, our community, and what's worked or flopped before. Then propose a few genuinely different directions — and for each, be upfront about the effort and risk involved.</p>
+      </div>
+      <button class="copy-btn" type="button">Copy</button>
+      <p class="customize"><strong>Customize:</strong> Be honest about volunteer capacity. An ambitious event the club can't staff is worse than a modest one it can.</p>
+      <div class="teaches"><strong>What it teaches</strong>State your goals <em>and</em> your real constraints. Ask for distinct options with honest effort/risk labels, not a single "best" idea.</div>
+    </div>
+
+    <div class="card">
+      <h3>Coordinate Volunteers Without the Chaos</h3>
+      <div class="prompt">
+        <p>We have an event coming up: [describe the event, date, and rough size]. We'll need volunteers for [list the jobs you can think of]. Every year this part turns into last-minute scrambling and a few people doing everything. Help me build a clear volunteer plan: what roles we actually need, how many people per role, a simple sign-up approach, and what each volunteer should know before they show up. Before you draft it, ask me where things have broken down in the past so we fix the real problem, not just make another spreadsheet.</p>
+      </div>
+      <button class="copy-btn" type="button">Copy</button>
+      <p class="customize"><strong>Customize:</strong> Tell it where coordination broke down last time — that's the difference between a generic plan and one that fixes your actual pain.</p>
+      <div class="teaches"><strong>What it teaches</strong>Point the AI at the real failure point. "Make me a plan" is fine; "fix what keeps breaking" is better.</div>
+    </div>
+
+    <div class="card">
+      <h3>Run a Post-Event Debrief That Sticks</h3>
+      <div class="prompt">
+        <p>We just wrapped our [event name]. Here's how it went, the good and the bad: [brain-dump everything — turnout, money raised, what went smoothly, what was stressful, comments you heard]. Help me turn this into a short, useful debrief document that next year's organizers will actually thank us for. Pull out what worked, what to change, and the specific lessons that would otherwise be forgotten by the time we do this again. Ask me anything you need to make it genuinely useful a year from now.</p>
+      </div>
+      <button class="copy-btn" type="button">Copy</button>
+      <p class="customize"><strong>Customize:</strong> Do this within a week of the event while details are fresh. Dump everything in — the AI will sort the signal from the venting.</p>
+      <div class="teaches"><strong>What it teaches</strong>The AI turns scattered recollection into institutional memory — the kind of document clubs almost never get around to writing.</div>
+    </div>
+  </details>
+
+  <!-- ============ COMMUNICATIONS ============ -->
+  <details class="section">
+    <summary>
+      <span class="sum-text">
+        <h2>Club Communications</h2>
+        <p class="sub">Newsletters, social media, member emails, press releases</p>
+      </span>
+      <span class="chev" aria-hidden="true">+</span>
+    </summary>
+
+    <div class="card">
+      <h3>Turn Rough Notes Into a Monthly Newsletter</h3>
+      <div class="prompt">
+        <p>I need to put together this month's newsletter for the Rotary Club of [Club Name]. Here are my raw notes on what happened and what's coming up: [paste everything — bullet points, half-sentences, dates, names]. Our newsletter should sound [describe the tone — warm, brief, a little funny, etc.] and our readers are [describe — busy members, the wider community, both]. Turn this into a clear, friendly newsletter with good section headings and a short, engaging intro. Ask me if anything in my notes is unclear before you write it up.</p>
+      </div>
+      <button class="copy-btn" type="button">Copy</button>
+      <p class="customize"><strong>Customize:</strong> Don't polish your notes first — messy bullets are exactly what the AI is good at shaping. Do specify the tone you want.</p>
+      <div class="teaches"><strong>What it teaches</strong>Describe the tone and the audience. The same facts become a very different newsletter depending on who it's for.</div>
+    </div>
+
+    <div class="card">
+      <h3>Write a Press Release for a Service Project</h3>
+      <div class="prompt">
+        <p>Our club just completed (or is about to launch) a service project: [describe what, where, when, who it helps, and any partners or sponsors]. I want a press release we can send to local media. For context, our local outlets are [describe — small-town paper, regional TV, community Facebook groups]. Write it in proper press-release format with a strong headline and a quote I can attribute to [name/role]. Before you write, ask me for the one detail about this project that makes it genuinely newsworthy — I may be burying the most interesting part.</p>
+      </div>
+      <button class="copy-btn" type="button">Copy</button>
+      <p class="customize"><strong>Customize:</strong> Have the who/what/where/when ready. Let the AI ask what's newsworthy — clubs often lead with the routine and bury the human story.</p>
+      <div class="teaches"><strong>What it teaches</strong>The AI can help you find the angle, not just format the facts. Ask it what's actually newsworthy here.</div>
+    </div>
+
+    <div class="card">
+      <h3>Turn One Event Into a Week of Social Posts</h3>
+      <div class="prompt">
+        <p>We have an event coming up (or just finished): [describe it]. We post on [platforms — Facebook, Instagram, etc.] and our followers are mostly [describe]. Help me plan a short series of posts — a couple before to build interest, one during, and one after to celebrate and thank people. Keep the tone [describe]. Give me the actual post text plus a note on what photo or visual would go with each. Ask me what matters most about this event before you start, so the posts lead with the right thing.</p>
+      </div>
+      <button class="copy-btn" type="button">Copy</button>
+      <p class="customize"><strong>Customize:</strong> Name your platforms — a Facebook post for longtime members reads differently from an Instagram post aimed at newcomers.</p>
+      <div class="teaches"><strong>What it teaches</strong>One ask can produce a whole sequence. Think in campaigns (before / during / after), not single posts.</div>
+    </div>
+
+    <div class="card">
+      <h3>Write a Member Email People Actually Open</h3>
+      <div class="prompt">
+        <p>I need to email our members about [the purpose — a call for volunteers, a schedule change, a dues reminder, etc.]. Here's what they need to know: [the key facts]. Honestly, our members skim these, and I want this one to land. Write me a short email with a subject line that earns the open, a clear ask, and an easy next step. Then give me a one-line alternative subject so I can choose. Tell me if I'm trying to cram in too much — if so, what should I cut?</p>
+      </div>
+      <button class="copy-btn" type="button">Copy</button>
+      <p class="customize"><strong>Customize:</strong> If you're tempted to cover five things, let the AI tell you which one to lead with. One clear ask per email gets results.</p>
+      <div class="teaches"><strong>What it teaches</strong>Invite the AI to cut your message down. Editing for focus is something it does well — and something we resist doing ourselves.</div>
+    </div>
+  </details>
+
+  <!-- ============ TAKING IT FURTHER ============ -->
+  <details class="section">
+    <summary>
+      <span class="sum-text">
+        <h2>Taking It Further</h2>
+        <p class="sub">Chaining outputs, using your own documents, going deeper</p>
+      </span>
+      <span class="chev" aria-hidden="true">+</span>
+    </summary>
+
+    <div class="card">
+      <h3>Feed the AI Your Own Documents</h3>
+      <div class="prompt">
+        <p>I'm going to share some of our club's own material with you: [describe what you're about to paste or upload — last year's budget, your bylaws, meeting minutes, a past grant application, etc.]. I want your help to [your goal — e.g., "summarize this for new board members," "find inconsistencies," or "draft this year's version"]. Read it carefully first, then before you do the task, tell me what you notice and ask me anything that's unclear or seems to be missing.</p>
+      </div>
+      <button class="copy-btn" type="button">Copy</button>
+      <p class="customize"><strong>Customize:</strong> Paste the text directly, or upload the file if your tool allows it. Tools like NotebookLM are built specifically for working from your own documents. Never paste anything you wouldn't want shared.</p>
+      <div class="teaches"><strong>What it teaches</strong>The AI is far more useful working from <em>your</em> real documents than from generic knowledge. Your material is the context.</div>
+    </div>
+
+    <div class="card">
+      <h3>Chain One Output Into the Next</h3>
+      <div class="prompt">
+        <p>We just worked out [the result you reached — e.g., a three-year plan, a new event concept, a membership strategy]. Now I want to put it to work. Using everything we just decided, help me create [the next thing — e.g., "a one-page summary for the board," "a checklist for the event committee," or "talking points for our next meeting"]. Keep it consistent with what we already agreed, and flag anything in the plan that becomes a problem once we try to put it into action.</p>
+      </div>
+      <button class="copy-btn" type="button">Copy</button>
+      <p class="customize"><strong>Customize:</strong> Use this in the <em>same</em> conversation, right after finishing something. The AI still remembers the details, so you don't have to re-explain.</p>
+      <div class="teaches"><strong>What it teaches</strong>One conversation can produce many outputs. A plan becomes a summary becomes a checklist becomes talking points — no starting over.</div>
+    </div>
+
+    <div class="card">
+      <h3>Build a Reusable Club Context Block</h3>
+      <div class="prompt">
+        <p>Help me write a reusable "about our club" paragraph that I can paste at the start of any future request to give you instant context. Interview me to pull out the details that matter most — our size, location, culture, strengths, challenges, and the kind of help I'll most often want. Then write it as a tight paragraph I can save and reuse, and tell me what to update over time so it stays accurate.</p>
+      </div>
+      <button class="copy-btn" type="button">Copy</button>
+      <p class="customize"><strong>Customize:</strong> Save the result in a notes app. Pasting it at the top of any starter on this page means you never have to re-explain your club again.</p>
+      <div class="teaches"><strong>What it teaches</strong>Good context is reusable. Build it once, and every future conversation starts smarter.</div>
+    </div>
+
+    <div class="card">
+      <h3>Pressure-Test a Decision Before You Make It</h3>
+      <div class="prompt">
+        <p>Our board is leaning toward [the decision — e.g., "moving our meeting to evenings," "dropping a long-running project," "raising dues"]. Here's our reasoning: [explain it]. Before we commit, I want you to argue the other side as honestly and forcefully as you can. What are the strongest objections? Who might we be ignoring? What's the failure case we're not talking about? After you've made the counter-argument, give me your genuine assessment — not just both sides, but what you'd actually do.</p>
+      </div>
+      <button class="copy-btn" type="button">Copy</button>
+      <p class="customize"><strong>Customize:</strong> Lay out your reasoning fully so the AI has something real to argue against. The point is to hear the case <em>before</em> you vote, not after.</p>
+      <div class="teaches"><strong>What it teaches</strong>Ask the AI to argue against you on purpose. A willing devil's advocate is one of the most valuable things it can be.</div>
+    </div>
+  </details>
+
+  <hr class="rule">
+
+  <!-- ============ NEWSLETTER ============ -->
+  <div class="footer-block">
+    <h2>Get the follow-up resources</h2>
+    <p>We'll send a short note with new starters, examples, and tips as we add them — no spam, easy to unsubscribe.</p>
+    <a class="cta" href="REPLACE_WITH_SIGNUP_LINK" target="_blank" rel="noopener">Sign up for updates</a>
+  </div>
+
+  <!-- ============ FEEDBACK ============ -->
+  <div class="footer-block">
+    <h2>Tell us what worked (and what didn't)</h2>
+    <p>Tried one of these with your club? We'd love to hear how it went and what you'd want next.</p>
+    <a class="cta secondary" href="REPLACE_WITH_FEEDBACK_LINK" target="_blank" rel="noopener">Share your feedback</a>
+  </div>
+
+  <footer class="fine">
+    Made for Rotary club leaders &amp; officers · Built during our AI training session
+  </footer>
+
+</div>
+
+<script>
+  document.querySelectorAll('.copy-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var card = btn.closest('.card');
+      var prompt = card ? card.querySelector('.prompt') : null;
+      if (!prompt) return;
+      var text = prompt.innerText.trim();
+
+      function done() {
+        var original = btn.textContent;
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(function () {
+          btn.textContent = original;
+          btn.classList.remove('copied');
+        }, 1800);
+      }
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done).catch(fallback);
+      } else {
+        fallback();
+      }
+
+      function fallback() {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); done(); } catch (e) {}
+        document.body.removeChild(ta);
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
