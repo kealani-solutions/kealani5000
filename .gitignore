@@ -1,6 +1,7 @@
 # Local screenshots and Playwright artifacts
 .playwright-mcp/
 *.png
+!favicon.png
 
 # Reference PDFs (cheat sheets, source guidelines) — kept locally, not shared
 *.pdf
