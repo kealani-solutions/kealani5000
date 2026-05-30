@@ -260,6 +260,56 @@
     font-size: 15px;
     padding: 48px 0 64px;
   }
+  footer.fine p {
+    margin: 0 0 8px;
+  }
+  footer.fine p:last-child {
+    margin-bottom: 0;
+  }
+
+  .org-line {
+    font-size: 15px;
+    color: var(--muted);
+    margin: 0 0 32px;
+  }
+
+  .notice {
+    background: #fff8e1;
+    border: 1px solid #e8c97a;
+    border-left: 4px solid #c79320;
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin: 40px 0 12px;
+    color: #4a3a10;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  .notice strong {
+    color: #4a3a10;
+  }
+  .notice .notice-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #8a6a14;
+    margin: 0 0 8px;
+  }
+  .notice p {
+    margin: 0 0 10px;
+  }
+  .notice p:last-child {
+    margin-bottom: 0;
+  }
+  .notice .cite {
+    font-size: 15px;
+    color: #6b5414;
+  }
+  .notice a {
+    color: #6b4a0a;
+    text-decoration: underline;
+  }
 
   @media (max-width: 600px) {
     .wrap { padding: 0 15px; }
@@ -288,7 +338,16 @@
     <h1>AI Starters for Running a Better Club</h1>
     <p class="lede">A handful of ready-to-use starting points for working with AI tools like Claude, Gemini, and NotebookLM. Find your challenge, copy a starter, add your club's details, and go.</p>
     <p class="lede" style="font-size:20px;color:var(--muted);">These aren't magic phrases. Each one teaches the same core skill: give the AI real context, ask it to question you before it answers, and expect depth instead of a checklist.</p>
+    <p class="org-line">A resource from Kealani Solutions — not affiliated with or endorsed by Rotary International.</p>
   </header>
+
+  <!-- ============ DATA PRIVACY NOTICE ============ -->
+  <div class="notice" role="note" aria-label="Data privacy notice">
+    <span class="notice-label">One rule before you start</span>
+    <p>Never paste member names, contact information, financial records, donor data, or grant details into any AI tool. Use general descriptions, not real data. If you're not sure whether something is safe to share, don't upload it.</p>
+    <p class="cite">— Rotary AI Guidelines, Section 4</p>
+    <p class="cite">Rotary International has published AI guidelines for members. Review them before using AI for Rotary work — and check your district's and club's own policies too. Find them at rotary.org (search "AI Guidelines for Members").</p>
+  </div>
 
   <!-- ============ START HERE ============ -->
   <section class="start-here">
@@ -552,10 +611,10 @@
     <div class="card">
       <h3>Feed the AI Your Own Documents</h3>
       <div class="prompt">
-        <p>I'm going to share some of our club's own material with you: [describe what you're about to paste or upload — last year's budget, your bylaws, meeting minutes, a past grant application, etc.]. I want your help to [your goal — e.g., "summarize this for new board members," "find inconsistencies," or "draft this year's version"]. Read it carefully first, then before you do the task, tell me what you notice and ask me anything that's unclear or seems to be missing.</p>
+        <p>I'm going to share some of our club's own material with you: [describe what you're about to paste or upload — a past event write-up, a public newsletter, a program description, or a strategic planning document with no personal or financial data]. I want your help to [your goal — e.g., "summarize this for new board members," "find inconsistencies," or "draft this year's version"]. Read it carefully first, then before you do the task, tell me what you notice and ask me anything that's unclear or seems to be missing.</p>
       </div>
       <button class="copy-btn" type="button">Copy</button>
-      <p class="customize"><strong>Customize:</strong> Paste the text directly, or upload the file if your tool allows it. Tools like NotebookLM are built specifically for working from your own documents. Never paste anything you wouldn't want shared.</p>
+      <p class="customize"><strong>Customize:</strong> Stick to material that's already public or that contains no personal, financial, donor, or grant information — past event write-ups, published newsletters, program descriptions, strategic plans. Tools like NotebookLM are built specifically for working from your own documents. If you're not sure something is safe to share, don't upload it.</p>
       <div class="teaches"><strong>What it teaches</strong>The AI is far more useful working from <em>your</em> real documents than from generic knowledge. Your material is the context.</div>
     </div>
 
@@ -595,7 +654,7 @@
   <!-- ============ NEWSLETTER ============ -->
   <div class="footer-block">
     <h2>Get the follow-up resources</h2>
-    <p>We'll send a short note with new starters, examples, and tips as we add them — no spam, easy to unsubscribe.</p>
+    <p>Get general AI tips and techniques you can apply to your Rotary work — added as we find things worth sharing. Not a Rotary-curated or officially scheduled resource. No spam, easy to unsubscribe.</p>
     <a class="cta" href="REPLACE_WITH_SIGNUP_LINK" target="_blank" rel="noopener">Sign up for updates</a>
   </div>
 
@@ -607,7 +666,9 @@
   </div>
 
   <footer class="fine">
-    Made for Rotary club leaders &amp; officers · Built during our AI training session
+    <p>Made for Rotary club leaders &amp; officers · Built during our AI training session</p>
+    <p>A resource from Kealani Solutions — not affiliated with or endorsed by Rotary International.</p>
+    <p>Starters on this page were developed with AI assistance and reviewed by Kealani Solutions.</p>
   </footer>
 
 </div>
